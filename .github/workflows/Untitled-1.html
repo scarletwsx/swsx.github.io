@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>扫描二维码添加微信</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+  .qrcode { max-width: 300px; margin: auto; display: none; border: 1px solid #ccc; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  img { max-width: 100%; height: auto; }
+  button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h1>扫一扫，添加微信</h1>
+<button onclick="showQRCode()">显示二维码</button>
+<div id="qrcode" class="qrcode">
+  <img src="111.jpg" alt="微信二维码">
+  <p>请使用微信扫描上方二维码。</p>
+</div>
+
+<script>
+function showQRCode() {
+  var qrcode = document.getElementById('qrcode');
+  if (qrcode.style.display === 'none' || qrcode.style.display === '') {
+    qrcode.style.display = 'block';
+  } else {
+    qrcode.style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
